@@ -1,0 +1,126 @@
+
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class='col-12 align-self-center'>
+            <h1 class="display-1">Kai Sushi</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 search pb-4">
+            <form method="get">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control" placeholder="Buscar..." name="buscar" value="{{ request.GET.buscar }}">
+                        <span class="input-group-list">
+                            <i class="icon icon-search"></i>
+                            <button type="submit" class="btn btn-success">Buscar</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-8'>
+            <div class="row" style="padding:10px 0;">
+                <div class='col-12'>
+                    <div class="row">
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">Bowl</h3>
+                                        <p class="card-text">Proteina + Base</p>
+                                        <p class="card-text">2 Salsas</p>
+                                        <a href="{% url 'newbowl'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">HandoRoll</h3>
+                                        <p class="card-text">3 Rellenos</p>
+                                        <p class="card-text"> </p>
+                                        <a href="{% url 'newhandroll'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">Almuerzo</h3>
+                                        <p class="card-text">Carne</p>
+                                        <p class="card-text">Agrenado</p>
+                                        <a href="{% url 'newalmuerzo'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">Desayuno</h3>
+                                        <p class="card-text">Queso + Proteina</p>
+                                        <p class="card-text">2 Vegetales</p>
+                                        <a href="{% url 'newdesayuno'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">HandoRoll Classic</h3>
+                                        <p class="card-text">Seleccionar</p>
+                                        <p class="card-text"> </p>
+                                        <a href="{% url 'listhc'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">Kai</h3>
+                                        <p class="card-text">Seleccionar</p>
+                                        <p class="card-text"> </p>
+                                        <a href="{% url 'listkai'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <div class="card " style="height: 15rem; width: 15rem; margin: 5px 0px;">
+                                    <div class="card-body">
+                                        <div class="container flex-column d-flex justify-content-center">
+                                            <h3 class="card-title">Selladitos</h3>
+                                        <p class="card-text">Seleccionar</p>
+                                        <p class="card-text"> </p>
+                                        <a href="{% url 'listsell'%}" class="btn btn-primary">Ir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            {% include "core/carrito.html" %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
